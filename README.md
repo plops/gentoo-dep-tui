@@ -13,6 +13,34 @@ In Gentoo, toggling a single USE flag rarely affects just one package:
 - Turning off `-gpg` on `dev-vcs/git` may save **`0 B`** because `app-crypt/gnupg`, `app-crypt/gpgme`, `app-portage/gemato`, and `app-portage/getuto` still hold `app-alternatives/gpg` in the graph.
 - Flipping `python_single_target_*` or `USE`-coupled dependencies (`[flag?]`, `[flag=]`) can trigger `REQUIRED_USE` cascades or cross-package conflicts.
 
+```
+┌Pakete (587)──────────────────────────────────┐┌Details / USE-Flags──────────────────────────────────────────┐┌Blame / Pros-Cons─────────────────────────────┐
+│> sys-power/tlp (19 pkg, 11.7 MB)             ││sys-power/tlp  Binpkg: kein Binpkg (Source-Build)  Pkg-Quell-││Warum ist das hier?                           │
+│  dev-vcs/git (13 pkg, 10.6 MB)               ││                                                             ││(kein Pfad — Welt-Paket oder leer)            │
+│  sys-kernel/gentoo-sources (12 pkg, 6.8 MB)  ││[x] ppd -800.0 kB bin / -2.2 MB dl (+0/-3 pkg)               ││                                              │
+│  x11-terms/xterm (10 pkg, 6.3 MB)            ││[ ] python_single_target_python3_12 0 B bin / 0 B dl CONFLICT││Ausschalten von ppd bewirkt:                  │
+│  media-video/mpv (9 pkg, 4.9 MB)             ││[ ] python_single_target_python3_13 0 B bin / 0 B dl CONFLICT││- dev-python/dbus-python                      │
+│  app-containers/docker (8 pkg, 53.3 MB)      ││[x] python_single_target_python3_14 0 B bin / 0 B dl         ││- dev-python/pycairo                          │
+│  net-analyzer/wireshark (7 pkg, 53.1 MB)     ││[x] rdw -10.8 MB bin / -17.6 MB dl (+0/-14 pkg)              ││- dev-python/pygobject                        │
+│  x11-base/xorg-server (7 pkg, 3.7 MB)        ││                                                             ││                                              │
+│  app-pda/ifuse (7 pkg, 430.0 kB)             ││                                                             ││Geteilte Abhaengigkeiten:                     │
+│  app-text/mupdf (6 pkg, 27.8 MB)             ││                                                             ││dev-lang/python                               │
+│  app-editors/emacs (6 pkg, 35.5 MB)          ││                                                             ││gehalten von app-accessibility/at-spi2-core   │
+│  net-misc/mosh (5 pkg, 6.5 MB)               ││                                                             ││gehalten von app-portage/gemato               │
+│  sys-apps/qdirstat (5 pkg, 170.0 kB)         ││                                                             ││gehalten von app-portage/gentoolkit           │
+│  net-dns/bind (5 pkg, 2.3 MB)                ││                                                             ││gehalten von dev-debug/gdb                    │
+│  sys-devel/mold (4 pkg, 2.9 MB)              ││                                                             ││                                              │
+│  dev-lisp/sbcl (4 pkg, 310.0 kB)             ││                                                             ││ppd: TLP Profiles Daemon that replaces        │
+│  app-admin/sudo (4 pkg, 2.4 MB)              ││                                                             ││power-profiles-daemon by using the same D-Bus │
+│  net-analyzer/ngrep (4 pkg, 850.0 kB)        ││                                                             ││API.                                          │
+│  net-misc/chrony (4 pkg, 470.0 kB)           ││                                                             ││                                              │
+└──────────────────────────────────────────────┘└─────────────────────────────────────────────────────────────┘└──────────────────────────────────────────────┘
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Binpkg 756.6 MB (503/554 Hits)  Quell-DL 3313.0 MB  Build-Only 243.2 MB bin / 1761.3 MB dl  Pakete 554  Konflikte 0
+[Space] Toggle  [Tab] Pane  [1/2] View  [/] Suche  [o] Sort  [x] Cut  [a] Apply  [u] Undo  [S] package.use  [?] Hilfe  [q] Quit
+```
+
+
 Running `emerge -pv` for every "what-if?" experiment takes seconds per check and gives no interactive tree-size breakdown. `gentoo-dep-tui` parses your local Portage metadata (`metadata/md5-cache`, `Manifest`, profiles, `/etc/portage`, and an optional binary host `Packages` index) directly in memory and simulates flag toggles in parallel across CPU cores.
 
 ---
