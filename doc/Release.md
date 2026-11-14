@@ -86,10 +86,10 @@ git add Cargo.lock
 git commit -m "chore(release): v0.2.0"
 git tag -a v0.2.0 -m "Release v0.2.0"
 
-git push origin main --follow-tags
+git push origin master --follow-tags
 ```
 
-*(Alternativ explizit in zwei Schritten: `git push origin main` und `git push origin v0.2.0`.)*
+*(Alternativ explizit in zwei Schritten: `git push origin master` und `git push origin v0.2.0`.)*
 
 **Hinweis zu Pre-Releases:** Tags mit Bindestrich wie `v0.2.0-rc.1` (entsprechend `version = "0.2.0-rc.1"` in `Cargo.toml` und `## [0.2.0-rc.1]` in `CHANGELOG.md`) werden von GitHub automatisch als **Pre-release** markiert.
 
@@ -123,8 +123,8 @@ git commit --amend --no-edit   # (oder neuen Fix-Commit erstellen)
 
 # 3. Tag neu setzen und erneut pushen
 git tag -a v0.2.0 -m "Release v0.2.0"
-git push origin main --follow-tags --force-with-lease
+git push origin master --follow-tags --force-with-lease
 ```
 
-*(Falls du keinen Force-Push auf `main` machen willst, erstelle statt `--amend` einfach einen normalen Korrektur-Commit.)*
+*(Falls du keinen Force-Push auf `master` machen willst, erstelle statt `--amend` einfach einen normalen Korrektur-Commit.)*
 ```
