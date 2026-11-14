@@ -1,6 +1,7 @@
 ich starte das program mit:
 target/release/gentoo-dep-tui  --binhost /tmp/Packages
 
+```
  [1] Pakete & Alternativen │ [2] Global Big Levers
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -52,10 +53,10 @@ target/release/gentoo-dep-tui  --binhost /tmp/Packages
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Binpkg 756.6 MB (503/554 Hits)  Quell-DL 3313.0 MB  Build-Only 243.2 MB bin / 1761.3 MB dl  Pakete 554  Konflikte 0
 [Space] Toggle  [Tab] Pane  [1/2] View  [/] Suche  [o] Sort  [x] Cut  [a] Apply  [u] Undo  [S] package.use  [?] Hilfe  [q] Quit
-
+```
 
 ich sortiere linke spalte nach groesse mit o
-
+```
 ┌Pakete (587)──────────────────────────────────┐┌Details / USE-Flags──────────────────────────────────────────┐┌Blame / Pros-Cons─────────────────────────────┐
 │> sys-power/tlp (19 pkg, 11.7 MB)             ││sys-power/tlp  Binpkg: kein Binpkg (Source-Build)  Pkg-Quell-││Warum ist das hier?                           │
 │  dev-vcs/git (13 pkg, 10.6 MB)               ││                                                             ││(kein Pfad — Welt-Paket oder leer)            │
@@ -80,9 +81,9 @@ ich sortiere linke spalte nach groesse mit o
 ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Binpkg 756.6 MB (503/554 Hits)  Quell-DL 3313.0 MB  Build-Only 243.2 MB bin / 1761.3 MB dl  Pakete 554  Konflikte 0
 [Space] Toggle  [Tab] Pane  [1/2] View  [/] Suche  [o] Sort  [x] Cut  [a] Apply  [u] Undo  [S] package.use  [?] Hilfe  [q] Quit
-
+```
 ich schalte rdw, ppd und python aus und druecke S um zu speichern
-
+```
 ┌Pakete (569)──────────────────────────────────┐┌Details / USE-Flags──────────────────────────────────────────┐┌Blame / Pros-Cons─────────────────────────────┐
 │  app-misc/tmate (3 pkg, 300.0 kB)            ││sys-power/tlp  Binpkg: kein Binpkg (Source-Build)  Pkg-Quell-││Warum ist das hier?                           │
 │  media-video/wireplumber (3 pkg, 780.0 kB)   ││                                                             ││(kein Pfad — Welt-Paket oder leer)            │
@@ -107,12 +108,12 @@ ich schalte rdw, ppd und python aus und druecke S um zu speichern
 Binpkg 745.0 MB (486/537 Hits)  Quell-DL 3293.2 MB  Build-Only 243.2 MB bin / 1761.3 MB dl  Pakete 537  Konflikte 0
 [Space] Toggle  [Tab] Pane  [1/2] View  [/] Suche  [o] Sort  [x] Cut  [a] Apply  [u] Undo  [S] package.use  [?] Hilfe  [q] Quit  package.use geschrieben:
 /tmp/gentoo-dep-tui.package.use
-
+```
 kiel@localhost ~ $ cat /tmp/gentoo-dep-tui.package.use 
 sys-power/tlp -ppd -python_single_target_python3_14 -rdw
 
 jetzt ist git ziemlich gross:
-
+```
 ┌Pakete (569)──────────────────────────────────┐┌Details / USE-Flags──────────────────────────────────────────┐┌Blame / Pros-Cons─────────────────────────────┐
 │> dev-vcs/git (13 pkg, 10.6 MB)               ││dev-vcs/git  Binpkg: 9.8 MB  Pkg-Quell-DL: 8.7 MB            ││Warum ist das hier?                           │
 │  sys-kernel/gentoo-sources (12 pkg, 6.8 MB)  ││                                                             ││Kette 1:                                      │
@@ -143,9 +144,9 @@ jetzt ist git ziemlich gross:
 └──────────────────────────────────────────────┘└─────────────────────────────────────────────────────────────┘└──────────────────────────────────────────────┘
 ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Binpkg 745.0 MB (486/537 Hits)  Quell-DL 3293.2 MB  Build-Only 243.2 MB bin / 1761.3 MB dl  Pakete 537  Konflikte 0
-
+```
 schalte da sachen aus die ich wohl nicht brauche
-
+```
 ┌Pakete (553)──────────────────────────────────┐┌Details / USE-Flags──────────────────────────────────────────┐┌Blame / Pros-Cons─────────────────────────────┐
 │  app-portage/eix (3 pkg, 820.0 kB)           ││dev-vcs/git  Binpkg: 9.8 MB  Pkg-Quell-DL: 8.7 MB            ││Warum ist das hier?                           │
 │  net-dns/dnsmasq (3 pkg, 570.0 kB)           ││                                                             ││Kette 1:                                      │
@@ -177,9 +178,9 @@ schalte da sachen aus die ich wohl nicht brauche
 └──────────────────────────────────────────────┘└─────────────────────────────────────────────────────────────┘└──────────────────────────────────────────────┘
 ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Binpkg 744.2 MB (474/525 Hits)  Quell-DL 3292.1 MB  Build-Only 243.4 MB bin / 1761.9 MB dl  Pakete 525  Konflikte 0
-
+```
 schaue die gpg alternativen in der rechten column an:
-
+```
 ┌Pakete (553)────────────────────────────┐┌Details / USE-Flags───────────────────────────────────┐┌Blame / Pros-Cons───────────────────────┐
 │  net-im/signal-desktop-bin (2 pkg, 11.6││dev-vcs/git  Binpkg: 9.8 MB  Pkg-Quell-DL: 8.7 MB     ││Warum ist das hier?                     │
 │  net-vpn/tailscale (2 pkg, 400.0 kB)   ││                                                      ││Kette 1:                                │
@@ -209,7 +210,8 @@ schaue die gpg alternativen in der rechten column an:
 └────────────────────────────────────────┘└──────────────────────────────────────────────────────┘└────────────────────────────────────────┘
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Binpkg 744.2 MB (474/525 Hits)  Quell-DL 3292.1 MB  Build-Only 243.4 MB bin / 1761.9 MB dl  Pakete 525  Konflikte 0
-
+```
+```
 ┌Pakete (553)────────────────────────────┐┌Details / USE-Flags───────────────────────────────────┐┌Blame / Pros-Cons───────────────────────┐
 │  net-im/signal-desktop-bin (2 pkg, 11.6││dev-vcs/git  Binpkg: 9.8 MB  Pkg-Quell-DL: 8.7 MB     ││Warum ist das hier?                     │
 │  net-vpn/tailscale (2 pkg, 400.0 kB)   ││                                                      ││Kette 1:                                │
@@ -239,7 +241,9 @@ Binpkg 744.2 MB (474/525 Hits)  Quell-DL 3292.1 MB  Build-Only 243.4 MB bin / 17
 └────────────────────────────────────────┘└──────────────────────────────────────────────────────┘└────────────────────────────────────────┘
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Binpkg 744.2 MB (474/525 Hits)  Quell-DL 3292.1 MB  Build-Only 243.4 MB bin / 1761.9 MB dl  Pakete 525  Konflikte 0
+```
 
+```
 ┌Pakete (553)────────────────────────────┐┌Details / USE-Flags───────────────────────────────────┐┌Blame / Pros-Cons───────────────────────┐
 │  net-im/signal-desktop-bin (2 pkg, 11.6││dev-vcs/git  Binpkg: 9.8 MB  Pkg-Quell-DL: 8.7 MB     ││Warum ist das hier?                     │
 │  net-vpn/tailscale (2 pkg, 400.0 kB)   ││                                                      ││Kette 1:                                │
@@ -269,7 +273,9 @@ Binpkg 744.2 MB (474/525 Hits)  Quell-DL 3292.1 MB  Build-Only 243.4 MB bin / 17
 └────────────────────────────────────────┘└──────────────────────────────────────────────────────┘└────────────────────────────────────────┘
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Binpkg 744.2 MB (474/525 Hits)  Quell-DL 3292.1 MB  Build-Only 243.4 MB bin / 1761.9 MB dl  Pakete 525  Konflikte 0
+```
 
+```
 Pakete (553)────────────────────────────┐┌Details / USE-Flags───────────────────────────────────┐┌Blame / Pros-Cons───────────────────────┐
 │  net-im/signal-desktop-bin (2 pkg, 11.6││dev-vcs/git  Binpkg: 9.8 MB  Pkg-Quell-DL: 8.7 MB     ││Warum ist das hier?                     │
 │  net-vpn/tailscale (2 pkg, 400.0 kB)   ││                                                      ││Kette 1:                                │
@@ -299,7 +305,8 @@ Pakete (553)──────────────────────�
 └────────────────────────────────────────┘└──────────────────────────────────────────────────────┘└────────────────────────────────────────┘
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Binpkg 744.2 MB (474/525 Hits)  Quell-DL 3292.1 MB  Build-Only 243.4 MB bin / 1761.9 MB dl  Pakete 525  Konflikte 0
-
+```
+```
 ┌Pakete (553)────────────────────────────┐┌Details / USE-Flags───────────────────────────────────┐┌Blame / Pros-Cons───────────────────────┐
 │  net-im/signal-desktop-bin (2 pkg, 11.6││dev-vcs/git  Binpkg: 9.8 MB  Pkg-Quell-DL: 8.7 MB     ││Warum ist das hier?                     │
 │  net-vpn/tailscale (2 pkg, 400.0 kB)   ││                                                      ││Kette 1:                                │
@@ -329,9 +336,11 @@ Binpkg 744.2 MB (474/525 Hits)  Quell-DL 3292.1 MB  Build-Only 243.4 MB bin / 17
 └────────────────────────────────────────┘└──────────────────────────────────────────────────────┘└────────────────────────────────────────┘
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Binpkg 744.2 MB (474/525 Hits)  Quell-DL 3292.1 MB  Build-Only 243.4 MB bin / 1761.9 MB dl  Pakete 525  Konflikte 0
+```
 
 druecke a auf gpgme
 
+```
 ┌Pakete (551)────────────────────────────┐┌Details / USE-Flags───────────────────────────────────┐┌Blame / Pros-Cons───────────────────────┐
 │  net-im/signal-desktop-bin (2 pkg, 11.6││dev-vcs/git  Binpkg: 9.8 MB  Pkg-Quell-DL: 8.7 MB     ││Warum ist das hier?                     │
 │  net-vpn/tailscale (2 pkg, 400.0 kB)   ││                                                      ││Kette 1:                                │
@@ -363,9 +372,11 @@ druecke a auf gpgme
 Binpkg 743.7 MB (473/524 Hits)  Quell-DL 3290.8 MB  Build-Only 243.9 MB bin / 1763.3 MB dl  Pakete 524  Konflikte 0
 [Space] Toggle  [Tab] Pane  [1/2] View  [/] Suche  [o] Sort  [x] Cut  [a] Apply  [u] Undo  [S] package.use  [?] Hilfe  [q] Quit
 *ungespeichert*  Cut-Blocker angewendet
+```
 
+```
 kiel@localhost ~ $ cat /tmp/gentoo-dep-tui.package.use 
 app-portage/portage-utils static
 dev-vcs/git -nls -perl -python_single_target_python3_14 -webdav
 sys-power/tlp -ppd -python_single_target_python3_14 -rdw
-
+```
