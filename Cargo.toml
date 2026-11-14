@@ -1,0 +1,16 @@
+[package]
+name = "gentoo-dep-tui"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "ncdu fuer Gentoo-USE-Flags (minimale TUI)"
+
+[dependencies]
+portage-atom = "0.12"
+portage-metadata = "0.11"
+clap = { version = "4", features = ["derive"] }
+rayon = "1"
+walkdir = "2"
+ratatui = "0.30"
+crossterm = "0.29"
+anyhow = "1"
